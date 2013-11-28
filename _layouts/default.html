@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <meta name="author" content="Allen Luo">
+    <meta name="description" content="Allen's Blog">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/statics/css/default.min.css" type="text/css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <!--[if lt IE 8]><script src="/statics/webfont/ie7/ie7.min.css"></script><![endif]-->
+</head>
+<body>
+    <div id="container" class="clearfix">
+
+        {{ content }}
+
+        <div class="sideblock profile">
+            <div class="bio clearfix">
+                <img class="face" src="/statics/img/icon.png">
+                <a class="author" href="http://movoin.com">Allen Luo</a>
+                <span class="job">Senior PHP Engineer</span>
+            </div>
+            <ul class="links clearfix">
+                <li><a class="blue" href="https://github.com/movoin"><i class="icon-github"></i></a></li>
+                <li><a class="orange" href=""><i class="icon-vcard"></i></a></li>
+                <li><a class="green" href="http://www.weibo.com/movoin"><i class="icon-weibo"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="sideblock navlist">
+            <ul>
+            {% for category in site.categories %}
+                <li><a href="/{{ category }}"><i class="icon-code"></i> {{ category }} <span class="badge">{{ site.categories[category].size }}</span></a></li>
+            {% endfor %}
+            </ul>
+        </div>
+
+<!--
+        <div class="sideblock navlist">
+            <ul>
+                <li><a href=""><i class="icon-link"></i> PHP</a></li>
+                <li><a href=""><i class="icon-link"></i> JavaScript</a></li>
+                <li><a href=""><i class="icon-link"></i> Linux</a></li>
+                <li><a href=""><i class="icon-link"></i> GoLang</a></li>
+                <li><a href=""><i class="icon-link"></i> Python</a></li>
+            </ul>
+        </div>
+-->
+    </div>
+
+    <script type="text/javascript" src="/statics/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/statics/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="/statics/js/jquery.scrollUp.min.js"></script>
+    <script type="text/javascript">
+    /* scrollUp Minimum setup */
+    $(function () {
+        $.scrollUp({
+            scrollName: 'scrollUp', // Element ID
+            scrollDistance: 300, // Distance from top/bottom before showing element (px)
+            scrollFrom: 'top', // 'top' or 'bottom'
+            scrollSpeed: 300, // Speed back to top (ms)
+            easingType: 'linear', // Scroll to top easing (see http://easings.net/)
+            animation: 'fade', // Fade, slide, none
+            animationInSpeed: 200, // Animation in speed (ms)
+            animationOutSpeed: 200, // Animation out speed (ms)
+            scrollText: 'Scroll to top', // Text for element, can contain HTML
+            scrollTitle: false, // Set a custom <a> title if required. Defaults to scrollText
+            scrollImg: true, // Set true to use image
+            activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
+            zIndex: 2147483647 // Z-Index for the overlay
+        });
+    });
+    </script>
+
+</body>
+</html>
