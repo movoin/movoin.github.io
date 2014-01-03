@@ -17,7 +17,6 @@ category: linux
 - 名称: vagrant-centos-6-5
 - 类型: Linux
 - 版本: RedHat 64
-
 - 内存: 512M
 - 硬盘: 40G
 - USB: 关闭
