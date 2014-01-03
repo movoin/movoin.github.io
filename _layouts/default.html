@@ -30,8 +30,8 @@
 
         <div class="sideblock navlist">
             <ul>
-            {% for mycate in site.categories %}
-                <li><a href="/{{ mycate }}"><i class="icon-code"></i> {{ mycate }} <span class="badge">{{ site.categories[mycate].size }}</span></a></li>
+            {% for category in site.categories %}
+                <li><a href="/{{ category[0] }}"><i class="icon-code"></i> {{ category[0] }} <span class="badge">{{ site.categories[category].size }}</span></a></li>
             {% endfor %}
             </ul>
         </div>
