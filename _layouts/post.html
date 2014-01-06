@@ -12,3 +12,42 @@ layout: default
         {{ content }}
     </div>
 </div>
+
+{% include bio.html %}
+
+{% include toc.html %}
+
+<script type="text/javascript" src="/statics/js/jquery.toc.min.js"></script>
+<script type="text/javascript">
+$(function () {
+    var $TOC = $('#toc');
+    var tHeight = function() {
+        var $bio = $('#bio'),
+            def_h = $bio.position().top + $bio.height() + 30;
+        if ($(window).scrollTop() >= def_h - 30) {
+            return 10;
+        } else {
+            return def_h;
+        }
+    },
+    tLeft = function() {
+        var $_pst = $('.post');
+        return $_pst.position().left + $_pst.width();
+    };
+    $TOC.reSize = function() {
+        var self = $(this);
+        if (tHeight() == 10) {
+            self.css('position', 'fixed');
+        } else {
+            self.css('position', 'absolute');
+        }
+        self.css({top: tHeight(), left: tLeft()});
+    };
+
+    $(window).on('resize scroll', function() {
+        $TOC.reSize();
+    });
+
+    $TOC.toc({'selectors': 'h2,h3'}).reSize();
+});
+</script>
