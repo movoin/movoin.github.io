@@ -7,3 +7,5 @@ permalink: /:title.html
 
 title: Movoin Studio
 url: http://movoin.com
+
+encoding: utf-8
