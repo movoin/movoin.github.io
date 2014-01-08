@@ -201,6 +201,14 @@ gem install --no-ri --no-rdoc puppet
 gem install --no-ri --no-rdoc chef
 ```
 
+#### 直接使用 Shell 方式部署
+
+貌似是依赖 `scp` 所以把它装上就行了
+
+```bash
+yum -y install openssh-clients
+```
+
 ### 扎手尾
 
 ```bash
@@ -221,8 +229,10 @@ vagrant package --base "vagrant-centos-6-5" --output "vagrant-centos-6-5.box"
 
 ## 接下来...
 
-> 接下来当然就是开始折腾 Puppet 了，但现在还是有些困扰，就是直接用 yum 安装的是源中的最新版，而我们线上环境很可惜并不是最新版，只能使用编译安装，可是肿么玩嘞？？？
+> 本想折腾 Puppet，考虑到实际情况，所以还是改为使用 Shell 吧
 
 ## Changelogs
 
-- 2014/1/8 修复配置 vagrant .ssh 目录权限时的错误
+- 2014/1/8
+    - 修复配置 vagrant .ssh 目录权限时的错误
+    - 添加 Shell Provisioner 配置
