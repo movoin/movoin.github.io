@@ -104,9 +104,6 @@ adduser -g vagrant vagrant
 echo "vagrant" | passwd --stdin vagrant
 ```
 
-账号密码均为 `vagrant`
-
-
 ### 安装 sudo
 
 ```bash
