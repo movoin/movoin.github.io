@@ -6,23 +6,66 @@
     <meta name="author" content="Allen Luo">
     <meta name="description" content="Allen's Blog">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="/statics/css/default.min.css" type="text/css">
+    <link rel="stylesheet" href="/statics/css/default.css" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <!--[if lt IE 8]><script src="/statics/webfont/ie7/ie7.min.css"></script><![endif]-->
-    <script type="text/javascript" src="/statics/js/min.js"></script>
 </head>
 <body>
-    <div id="container" class="clearfix">
 
-        {{ content }}
+    <header class="hd clearfix">
+        <button class="collapse" type="button">
+            <span class="collapse-line"></span>
+            <span class="collapse-line"></span>
+            <span class="collapse-line"></span>
+        </button>
+        <h1 class="hd-logo"><a class="ir" href="{{ site.url }}">{{ site.title }}</a></h1>
+        <nav class="hd-nav">
+            <ul>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/blogs/">Blogs</a></li>
+                <li><a href="/photos/">Photos</a></li>
+                <li><a href="http://github.com/movoin">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    </div>
+    {{ content }}
+
+    {% include footer.html %}
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="/statics/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/statics/js/jquery.scrollUp.min.js"></script>
     <script type="text/javascript">
-    /* scrollUp Minimum setup */
-    $(function () {
+    $(document).ready(function() {
+        var $collapse = $('.collapse'),
+            $nav = $('.hd-nav');
+
+        $collapse.on('click', function() {
+            if ($nav.hasClass('show-in') == false) {
+                $nav.addClass('show-in').removeClass('show-out');
+            }
+        });
+
+        $nav.append('<a class="hide" href="#close">&times;</a>');
+
+        $('.hide', $nav).on('click', function($e) {
+            if ($nav.hasClass('show-in')) {
+                $nav.removeClass('show-in').addClass('show-out');
+            }
+            $e.preventDefault();
+        });
+
         $.scrollUp({scrollName: 'scrollUp', scrollDistance: 300, scrollFrom: 'top', scrollSpeed: 300, easingType: 'linear', animation: 'fade', animationInSpeed: 200, animationOutSpeed: 200, scrollText: 'Scroll to top', scrollTitle: false, scrollImg: true, activeOverlay: false, zIndex: 2147483647 });
     });
-    </script>
 
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-993278-2', 'movoin.com');
+    ga('send', 'pageview');
+    </script>
 </body>
 </html>

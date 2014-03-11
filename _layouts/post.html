@@ -2,67 +2,19 @@
 layout: default
 ---
 
-<script type="text/javascript" src="/statics/js/shjs/sh_main.min.js"></script>
+<div class="wrap-single">
+    <article class="post">
+        <h2 class="post-title">{{ page.title }}</h2>
+        <p class="post-date">Written by <a href="http://weibo.com/movoin">@allen</a> on {{ page.date | date:'%Y-%m-%d' }}</p>
+        <section class="post-desc">
+            <p>{{ page.description }}</p>
+        </section>
+        <section class="post-cnt clearfix">
 
-<div class="post clearfix">
-    <div class="post-title">
-        <h1 title="{{ page.title }}">{{ page.title }}</h1>
-    </div>
-    <div class="post-cnt clearfix">
-        {{ content }}
-    </div>
+{{ content }}
 
-<!-- Duoshuo Comment BEGIN -->
-    <div class="ds-thread"></div>
-    <script type="text/javascript">
-    var duoshuoQuery = {short_name:"movoin"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = 'http://static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-        || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-    </script>
-<!-- Duoshuo Comment END -->
+        </section>
+    </article>
+
+{% include comment.html %}
 </div>
-
-{% include bio.html %}
-
-{% include toc.html %}
-
-<script type="text/javascript" src="/statics/js/jquery.toc.min.js"></script>
-<script type="text/javascript">
-$(function () {
-    var $TOC = $('#toc');
-    var tHeight = function() {
-        var $bio = $('#bio'),
-            def_h = $bio.position().top + $bio.height() + 30;
-        if ($(window).scrollTop() >= def_h - 30) {
-            return 10;
-        } else {
-            return def_h;
-        }
-    },
-    tLeft = function() {
-        var $_pst = $('.post');
-        return $_pst.position().left + $_pst.width();
-    };
-    $TOC.reSize = function() {
-        var self = $(this);
-        if (tHeight() == 10) {
-            self.css('position', 'fixed');
-        } else {
-            self.css('position', 'absolute');
-        }
-        self.css({top: tHeight(), left: tLeft()});
-    };
-
-    $(window).on('resize scroll', function() {
-        $TOC.reSize();
-    });
-
-    $TOC.toc({'selectors': 'h2,h3'}).reSize();
-});
-</script>
