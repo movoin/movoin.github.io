@@ -667,7 +667,7 @@ a:hover {
 .hd-nav a:visited,
 .hd-nav a:active {
     color: #999;
-    font-family: 'Exo 2', sans-serif;
+    font-family: sans-serif;
 }
 .hd-nav .active a,
 .hd-nav a:hover {
@@ -1076,7 +1076,7 @@ footer {
 
 #bio {
     text-align: center;
-    font-family: 'Exo 2', sans-serif;
+    font-family: sans-serif;
 }
 #bio h2 {
     font-size: 24px;
