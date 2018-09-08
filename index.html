@@ -1,9 +1,27 @@
 ---
-layout: default
+layout: global
 ---
 
-<section id="bio" class="landing-wrap">
-    <img src="/statics/img/face.png" alt="Allen Luo" />
-    <h2>Allen Luo</h2>
-    <p>Senior PHP Engineer - Team Leader</p>
-</section>
+<div class="cover">
+  <div class="cover-main">
+    <div class="cover-inner">
+      <div class="cover-content">
+        <h1 class="cover-logo">
+          <a href="{{ site.url }}" title="{{ site.title }}">{{ site.title }}</a>
+        </h1>
+        <h2 class="cover-title">{{ site.title }}</h2>
+        <hr class="cover-divider" />
+        <p class="cover-description">{{ site.description }}</p>
+        <hr class="cover-divider-tiny" />
+
+        <div class="cover-links">
+          <a href="{{ site.links.weibo }}" class="cover-links-weibo" title="Weibo">Weibo</a>
+          <a href="{{ site.url }}/blog" class="cover-links-blog" title="Blog">Blog</a>
+          <a href="{{ site.links.github }}" class="cover-links-github" title="Github">Github</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cover-overlay"></div>
+  </div>
+</div>

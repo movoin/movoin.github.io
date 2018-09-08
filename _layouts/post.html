@@ -2,19 +2,20 @@
 layout: default
 ---
 
-<div class="wrap-single">
-    <article class="post">
-        <h2 class="post-title">{{ page.title }}</h2>
-        <p class="post-date">Written by <a href="http://weibo.com/movoin">@allen</a> on {{ page.date | date:'%Y-%m-%d' }}</p>
-        <section class="post-desc">
-            <p>{{ page.description }}</p>
-        </section>
-        <section class="post-cnt clearfix">
+<div class="block">
+  <div class="post">
+    <h2 class="post-title">{{ page.title }}</h2>
+    <div class="post-date">Written by <span>{{ site.author }}</span> on <small>{{ page.date | date:'%Y/%m/%d' }}</small></div>
+    <div class="post-tags">
+    {% for tag in page.tags %}
+      <a href="javascript:void(0)" class="tag">{{ tag }}</a>
+    {% endfor %}
+    </div>
+    <div class="post-desc">{{ page.description }}</div>
+    <article class="post-cnt clearfix">
+      {{ content }}
 
-{{ content }}
-
-        </section>
+      <div class="post-end">-- EOF --</div>
     </article>
-
-{% include comment.html %}
+  </div>
 </div>

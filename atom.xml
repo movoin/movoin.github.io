@@ -4,11 +4,11 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Movoin Studio</title>
- <link href="http://movoin.com/atom.xml" rel="self"/>
- <link href="http://movoin.com/"/>
+ <title>Movoin</title>
+ <link href="https://movoin.com/atom.xml" rel="self"/>
+ <link href="https://movoin.com/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://movoin.com/</id>
+ <id>https://movoin.com/</id>
  <author>
    <name>Allen Luo</name>
    <email>movoin@gmail.com</email>
