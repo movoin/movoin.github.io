@@ -543,7 +543,7 @@ button,
 input,
 select,
 textarea {
-    color: #222;
+    color: #4A4A4A;
     font-family: "微软雅黑","Helvetica","Arial","sans-serif";
     font-size: 16px;
 }
@@ -765,9 +765,28 @@ a:hover {
 
 /* Common */
 .block {
-  width: 60%;
   margin: 0 auto;
 }
+
+/* 常规屏幕 */
+@media screen and (min-width: 1600px) {
+  .block {
+    width: 60%;
+  }
+}
+/* 小屏幕 */
+@media screen and (min-width: 768px) and (max-width: 1599px) {
+  .block {
+    width: 80%;
+  }
+}
+/* 手机屏幕 */
+@media screen and (max-width: 768px) {
+  .block {
+    width: 90%;
+  }
+}
+
 
 /* Layout */
 header {
