@@ -15,5 +15,5 @@ highlighter: true
 permalink: /blog/:year/:title.html
 
 encoding: utf-8
-updated_at: 20180907
+updated_at: 20180912
 copyright: 2006-2018 &copy; movoin.com
