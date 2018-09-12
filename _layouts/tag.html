@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div class="block">
+
+  <h3 class="tag-title">Posts by tag: <span>{{ page.tag }}</span></h3>
+
+  <div class="entry-list">
+  {% for post in page.posts %}
+    <div class="entry">
+      <h2 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <div class="entry-meta">
+        <div class="entry-date">
+          Written by <span>{{ site.author }}</span> on <small>{{ post.date | date:'%Y/%m/%d' }}</small>
+        </div>
+        <div class="entry-tags">
+          <span>Tags:</span> {{ post | tags }}
+        </div>
+      </div>
+      <div class="entry-desc">
+        <p>{{ post.description }}</p>
+      </div>
+    </div>
+  {% endfor %}
+  <div>
+
+</div>

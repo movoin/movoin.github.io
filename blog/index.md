@@ -11,10 +11,7 @@ layout: list
         Written by <span>{{ site.author }}</span> on <small>{{ post.date | date:'%Y/%m/%d' }}</small>
       </div>
       <div class="entry-tags">
-        <span>Tags:</span>
-      {% for tag in post.tags %}
-        <a href="javascript:void(0)" class="tag">{{ tag }}</a>
-      {% endfor %}
+        <span>Tags:</span> {{ post | tags }}
       </div>
     </div>
     <div class="entry-desc">

@@ -17,3 +17,11 @@ permalink: /blog/:year/:title.html
 encoding: utf-8
 updated_at: 20180912
 copyright: 2006-2018 &copy; movoin.com
+
+#### Plugins ####
+
+# Config plugin 'jekyll-tagging'
+
+tag_page_layout: tag
+tag_page_dir: blog/tags
+tag_permalink_style: pretty
