@@ -3,7 +3,7 @@ layout: post
 title: 安装 Git Server - CentOS 6.5
 description: 其实很早以前我就配置过 Git Server，但一直卡在不断提示输入密码的问题上面，今天无意中看到了 ~/.ssh/config 文件中的内容，让我顿悟了，原来是酱紫的！
 category: git
-tags: blog
+tags: git gitosis centos
 ---
 
 

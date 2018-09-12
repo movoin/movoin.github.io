@@ -3,7 +3,7 @@ layout: post
 title: 语义化版本
 description: 一直以来，我对版本号管理都是雾里看花一般似懂非懂。说来也是惭愧直到现在才想起来应该会有这样的标准 http://semver.org/，网上只是找到繁体中文，看懂虽然没问题，但还是不习惯，于是便决定把它转换一下，留着自己看。
 category: develop
-tags: blog
+tags: semver
 ---
 
 ### 版本格式：主版号.次版号.修订号，版号递增规则如下：

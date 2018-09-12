@@ -3,7 +3,7 @@ layout: post
 title: 如何在 CentOS 6.5 中安装 Antiword 和 Pdftotext
 description: 近期要完成一个需求，需要从 Doc, Docx, PDF, Txt, Html 中导入特定的内容。哎，以前没折腾过，只知道怎么生成，哪里会想到从里面导数据啊。网上搜索呗，这时候就可以发现百度真心不给力啊，还是 Google 好，第一页就可以找到我需要的内容，至少我知道怎么处理 Doc, Docx 和 PDF了，Txt 还有 Html 那都不是事儿。
 category: linux
-tags: blog
+tags: antiword pdftotext centos
 ---
 
 ### Antiword

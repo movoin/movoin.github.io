@@ -3,7 +3,7 @@ layout: post
 title: 如何创建 Vagrant BaseBox - CentOS 6.5
 description: 在差不多两年前，开发环境对我来说那都不是个事儿，但随着公司的系统越来越复杂，引入的技术越来越多，配置一个在本机运行的开发环境就变得越来越难，直至去年中旬，公司引入了 FastDFS后，彻底粉碎了团队所有人的本机开发环境。就在去年底，我了解到了 Vagrant，于是就和公司的运维小伙伴儿讨论是否可以用这货来做我们的开发环境，主要就是解决配置麻烦且可以运维驱动环境变化的需求。
 category: linux
-tags: blog
+tags: vagrant basebox centos
 ---
 
 ### 测试环境

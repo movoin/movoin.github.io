@@ -3,7 +3,7 @@ layout: list
 ---
 
 <div class="entry-list">
-{% for post in site.tags.blog %}
+{% for post in site.posts %}
   <div class="entry">
     <h2 class="entry-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
     <div class="entry-meta">
