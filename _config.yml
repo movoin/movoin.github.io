@@ -20,8 +20,7 @@ copyright: 2006-2018 &copy; movoin.com
 
 #### Plugins ####
 
-plugins:
-  - jekyll-tagging
+
 
 # Config plugin 'jekyll-tagging'
 
