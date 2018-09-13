@@ -16,6 +16,7 @@ gem "jekyll", "~> 3.8.3"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
+  gem 'jekyll-seo-tag'
   # gem 'jekyll-tagging', '~> 1.1.0'
 end
 

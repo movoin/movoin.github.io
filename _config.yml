@@ -5,6 +5,8 @@ author: Allen Luo
 description: Something new, Something awesome, Let’s code!
 email: movoin@gmail.com
 url: https://movoin.com
+logo: /statics/img/logo.png
+lang: zh-CN
 
 links:
     weibo: https://weibo.com/movoin
@@ -16,6 +18,8 @@ permalink: /blog/:year/:title.html
 
 encoding: utf-8
 updated_at: 20180913
-copyright: 2006-2018 &copy; movoin.com
+copyright: "&copy; movoin.com"
 
 #### Plugins ####
+plugins:
+  - jekyll-seo-tag
