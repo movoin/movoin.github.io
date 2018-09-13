@@ -11,7 +11,7 @@ links:
     github: https://github.com/movoin
 
 markdown: kramdown
-highlighter: true
+highlighter: pygments
 permalink: /blog/:year/:title.html
 
 encoding: utf-8
