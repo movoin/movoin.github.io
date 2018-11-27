@@ -17,7 +17,7 @@ highlighter: rouge
 permalink: /blog/:year/:title.html
 
 encoding: utf-8
-updated_at: 20180913
+updated_at: 20181127
 copyright: "&copy; movoin.com"
 
 #### Plugins ####
