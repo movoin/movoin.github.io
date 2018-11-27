@@ -822,7 +822,7 @@ footer {
   line-height: 50px;
   text-align: center;
   font-size: 14px;
-  color: #e6e6e6;
+  color: #ccc;
 }
 
 
@@ -845,13 +845,13 @@ footer {
 .entry-title a:visited,
 .entry-title a:active {
   font-size: 22px;
-  color: #4a4a4a;
-  font-weight: 100;
+  color: #222;
+  font-weight: 200;
   text-transform: uppercase;
   text-decoration: none;
 }
 .entry-title a:hover {
-  color: #777;
+  color: #4a90e2;
 }
 
 .entry-meta {
@@ -872,7 +872,7 @@ footer {
 }
 .entry-date {
   color: #aaa;
-  font-weight: 100;
+  font-weight: 200;
 }
 .entry-date span {
   color: #4a90e2;
@@ -882,10 +882,10 @@ footer {
 }
 
 .entry-desc {
-  color: #aaa;
-  font-weight: 100;
+  color: #777;
+  font-weight: 200;
   line-height: 1.8;
-  font-size: 14px;
+  font-size: 15px;
   margin-top: 30px;
 }
 .entry-desc p {
@@ -951,7 +951,7 @@ footer {
   margin: 0 0 10px 0;
   font-size: 22px;
   color: #4a4a4a;
-  font-weight: 100;
+  font-weight: 300;
   text-transform: uppercase;
   text-align: center;
 }
@@ -964,7 +964,7 @@ footer {
 .post-date {
   text-align: center;
   color: #aaa;
-  font-weight: 100;
+  font-weight: 200;
 }
 .post-date span {
   color: #4a90e2;
@@ -988,8 +988,8 @@ footer {
   background: #F3F4F6;
   border: 1px dashed #CDD1D6;
   font-size: 15px;
-  color: #A9B5C4;
-  font-weight: 100;
+  color: #aaa;
+  font-weight: 400;
   line-height: 30px;
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.08);
 }
